@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Menu class="hide" />
+    <Game class="show" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Menu from './components/Menu.vue'
+import Game from './components/Game.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Menu,
+    Game
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+body{
+  margin: 0 auto;
+
+  .hide{
+    display: none
+  }
+
+  .show{
+    display: block
+  }
+
+  #app{
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    background-repeat: no-repeat;
+  }
 }
+
 </style>
